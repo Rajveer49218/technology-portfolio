@@ -1,1 +1,313 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Auto Data Analytics | Rajveer Singh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">RS | PORTFOLIO</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<header>
+    <p class="tag">CMPT 3830 | WORK INTEGRATED LEARNING I</p>
+    <h1>Go Auto Data Analytics</h1>
+    <p>Vehicle Service Prediction and Automotive Analytics</p>
+    <p>NorQuest College | Group 6</p>
+    <a class="button" href="index.html">Back to Portfolio</a>
+</header>
+
+<main>
+
+<section>
+    <h2>01. Project Overview</h2>
+
+    <p>This collaborative machine learning project
+    focused on analyzing automotive service records
+    to understand vehicle maintenance patterns and
+    predict the time interval between services.</p>
+
+    <p>The project explored how data analytics and
+    predictive modelling could support automotive
+    dealerships in improving service planning and
+    customer engagement.</p>
+</section>
+
+<section>
+    <h2>02. Business Problem</h2>
+
+    <p>Automotive dealerships need to understand when
+    customers may require their next vehicle service.
+    Predictive analytics can help dealerships explore
+    opportunities for proactive maintenance reminders,
+    resource planning and customer retention.</p>
+
+    <h3>Business Objectives</h3>
+
+    <ul>
+        <li>Understand vehicle maintenance patterns.</li>
+        <li>Compare luxury and regular vehicles.</li>
+        <li>Analyze dealership service volumes.</li>
+        <li>Explore factors affecting service intervals.</li>
+        <li>Develop predictive regression models.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>03. Dataset Overview</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <h3>242,818</h3>
+            <p>Original service records</p>
+        </article>
+
+        <article class="project-card">
+            <h3>186,088</h3>
+            <p>Records after the initial cleaning stage</p>
+        </article>
+
+        <article class="project-card">
+            <h3>7 Dealerships</h3>
+            <p>Automotive service locations analyzed</p>
+        </article>
+
+    </div>
+
+    <h3>Key Dataset Features</h3>
+
+    <ul>
+        <li>Vehicle make and model</li>
+        <li>Vehicle year and mileage</li>
+        <li>Service and sale dates</li>
+        <li>Service cost</li>
+        <li>Customer and warranty payment indicators</li>
+        <li>Dealership information</li>
+        <li>Luxury vehicle classification</li>
+        <li>Service interval in months</li>
+    </ul>
+</section>
+
+<section>
+    <h2>04. Technical Methodology</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <h3>Data Cleaning</h3>
+            <p>Checked missing values, duplicates,
+            inconsistent vehicle brands and data types.</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Exploratory Data Analysis</h3>
+            <p>Used histograms, boxplots and correlation
+            analysis to understand automotive service data.</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Feature Engineering</h3>
+            <p>Calculated service intervals, classified
+            vehicle categories and extracted date features.</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Outlier Treatment</h3>
+            <p>Applied interquartile range methods to
+            identify and cap extreme values.</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Model Development</h3>
+            <p>Implemented Linear Regression, Random Forest
+            and Decision Tree regression models.</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Hyperparameter Optimization</h3>
+            <p>Used GridSearchCV with three-fold
+            cross-validation for Random Forest tuning.</p>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>05. Exploratory Data Analysis</h2>
+
+    <p>The analysis explored differences between luxury
+    and regular vehicles, maintenance intervals,
+    service costs, monthly service volumes and
+    dealership activity.</p>
+
+    <!-- Add approved Go Auto visualizations here -->
+
+</section>
+
+<section>
+    <h2>06. Machine Learning Results</h2>
+
+    <p>The following results were recorded on the
+    training dataset for the regular vehicle segment.</p>
+
+    <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse;"
+               border="1" cellpadding="12">
+
+            <tr style="background:#183b80;color:white;">
+                <th>Model</th>
+                <th>Training R²</th>
+                <th>Training RMSE (Months)</th>
+            </tr>
+
+            <tr>
+                <td>Linear Regression</td>
+                <td>0.0168</td>
+                <td>3.9617</td>
+            </tr>
+
+            <tr>
+                <td>Random Forest</td>
+                <td>0.8231</td>
+                <td>1.6804</td>
+            </tr>
+
+            <tr>
+                <td>Decision Tree</td>
+                <td>0.9669</td>
+                <td>0.7268</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <h3>Model Interpretation</h3>
+
+    <p>The Decision Tree achieved the highest training
+    R² score. However, strong training performance
+    does not establish accuracy on unseen data and
+    may indicate overfitting.</p>
+
+    <p>The Random Forest hyperparameter search reported
+    a best cross-validation R² score of approximately
+    0.0615, highlighting the need for further validation
+    and model improvement.</p>
+
+    <p>Independent test-set evaluation is required
+    before recommending a model for business use.</p>
+
+</section>
+
+<section>
+    <h2>07. Business Value and Recommendations</h2>
+
+    <ul>
+        <li>Explore personalized maintenance reminders.</li>
+        <li>Support dealership service scheduling.</li>
+        <li>Understand seasonal maintenance demand.</li>
+        <li>Compare luxury and regular vehicle patterns.</li>
+        <li>Support data-informed resource planning.</li>
+        <li>Validate predictions before operational use.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>08. Technologies Used</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <h3>Python</h3>
+            <p>Programming and data analysis</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Pandas and NumPy</h3>
+            <p>Data manipulation and preprocessing</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Matplotlib and Seaborn</h3>
+            <p>Statistical data visualization</p>
+        </article>
+
+        <article class="project-card">
+            <h3>Scikit-learn</h3>
+            <p>Machine learning and model evaluation</p>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>09. Individual Contribution</h2>
+
+    <p>This project was completed collaboratively
+    as part of Group 6 during Work Integrated
+    Learning I at NorQuest College.</p>
+
+    <!-- Add your confirmed individual responsibilities here -->
+
+</section>
+
+<section>
+    <h2>10. Responsible AI and Limitations</h2>
+
+    <ul>
+        <li>Protect confidential customer and vehicle data.</li>
+        <li>Avoid publishing individual vehicle identifiers.</li>
+        <li>Evaluate potential model overfitting.</li>
+        <li>Validate performance on unseen vehicles.</li>
+        <li>Check for potential data leakage.</li>
+        <li>Maintain human oversight of service decisions.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>11. Personal Reflection</h2>
+
+    <p>This project helped me understand the relationship
+    between machine learning and real-world automotive
+    business challenges. It strengthened my understanding
+    of data preprocessing, visualization, regression
+    modelling and model evaluation.</p>
+
+    <p>An important lesson was that high training accuracy
+    does not necessarily mean that a model will perform
+    well in real-world applications.</p>
+</section>
+
+<section>
+    <h2>12. Project Evidence</h2>
+
+    <p>Project documentation and technical evidence
+    are maintained in Jupyter Notebook format.</p>
+
+    <!-- Add approved GitHub project repository link here -->
+
+    <a class="button" href="index.html#projects">
+        Return to All Projects
+    </a>
+</section>
+
+</main>
+
+<footer>
+    <p>Rajveer Singh | Technology Portfolio 2026</p>
+    <p>NorQuest College | CMPT 3830</p>
+</footer>
+
+</body>
+</html>
+
